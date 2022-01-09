@@ -13,10 +13,11 @@ class CNN(nn.Module):
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=4, stride=4)
         )
+        self.flatten = nn.Flatten()
         self.fc_block = nn.LazyLinear(n_classes)
 
     def forward(self, x):
         x = self.conv_block(x)
-        x = x.reshape(x.shape[0], -1)
+        x = self.flatten(x)
         x = self.fc_block(x)
         return x
