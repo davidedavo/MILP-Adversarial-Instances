@@ -1,0 +1,83 @@
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\torchvision\io\image.py:11: UserWarning: Failed to load image Python extension: Could not find module 'C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\Lib\site-packages\torchvision\image.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+  warn(f"Failed to load image Python extension: {e}")
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\setuptools\distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+Global seed set to 42
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\torch\nn\modules\lazy.py:178: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+  warnings.warn('Lazy modules are a new feature under heavy development '
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+--- SETUP DATAMODULE stage:fit ---
+Restoring states from the checkpoint path at checkpoint/4f2c5994ac3fcfd95bbb50d6b741cb76/last.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+wandb: Currently logged in as: davoli (use `wandb login --relogin` to force relogin)
+wandb: Tracking run with wandb version 0.12.9
+
+wandb: Resuming run 4f2c5994ac3fcfd95bbb50d6b741cb76
+wandb:  View project at https://wandb.ai/davoli/Adversarial%20Learning
+wandb:  View run at https://wandb.ai/davoli/Adversarial%20Learning/runs/4f2c5994ac3fcfd95bbb50d6b741cb76
+wandb: Run data is saved locally in C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\wandb\run-20220115_145904-4f2c5994ac3fcfd95bbb50d6b741cb76
+wandb: Run `wandb offline` to turn off syncing.
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\pytorch_lightning\trainer\connectors\checkpoint_connector.py:247: UserWarning: You're resuming from a checkpoint that ended mid-epoch. Training will start from the beginning of the next epoch. This can cause unreliable results if further training is done, consider using an end of epoch checkpoint.
+  rank_zero_warn(
+Restored all states from the checkpoint file at checkpoint/4f2c5994ac3fcfd95bbb50d6b741cb76/last.ckpt
+
+  | Name       | Type             | Params
+------------------------------------------------
+0 | classifier | CNN              | 7.0 K 
+1 | loss       | CrossEntropyLoss | 0     
+2 | accuracy   | Accuracy         | 0     
+------------------------------------------------
+7.0 K     Trainable params
+0         Non-trainable params
+7.0 K     Total params
+0.028     Total estimated model params size (MB)
+Validation sanity check: 0it [00:00, ?it/s]C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\pytorch_lightning\callbacks\model_checkpoint.py:631: UserWarning: Checkpoint directory C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\checkpoint\4f2c5994ac3fcfd95bbb50d6b741cb76 exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\pytorch_lightning\trainer\data_loading.py:116: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+Validation sanity check:   0%|          | 0/2 [00:00<?, ?it/s]  rank_zero_warn(
+Validation sanity check:  50%|?????     | 1/2 [00:01<00:01,  1.36s/it]Global seed set to 42
+                                                                      Set parameter Username
+Academic license - for non-commercial use only - expires 2022-02-25
+Warning: linear constraint 14624 and linear constraint 14625 have the same name "fc_8"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14634 rows, 44478 columns and 698580 nonzeros
+Model fingerprint: 0x55cd032d
+Model has 29844 general constraints
+Variable types: 29844 continuous, 14634 integer (14634 binary)
+Coefficient statistics:
+  Matrix range     [8e-06, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 8627 rows and 32464 columns
+Presolve time: 1.24s
+Presolved: 6007 rows, 12014 columns, 21089 nonzeros
+Presolved model has 6007 SOS constraint(s)
+Variable types: 6007 continuous, 6007 integer (6007 binary)
+
+Root relaxation: objective 5.406753e+03, 401 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5406.75318    0    5          - 5406.75318      -     -    1s
+H    0     0                    5406.7531802 5406.75318  0.00%     -    1s
+     0     0 5406.75318    0    5 5406.75318 5406.75318  0.00%     -    1s
+
+Explored 1 nodes (401 simplex iterations) in 1.30 seconds (1.54 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 5406.75 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.406753180184e+03, best bound 5.406753180185e+03, gap 0.0000%
+The two models don't match
+pred_nn: 7; pred_milp:7
+output_nn: [[ -7.602362    3.4242158   6.452733    9.197155   -7.5689564  -7.9306006
+  -22.784739   25.037983   -3.7300112   4.3334093]]
+output_milp: [ 0.          3.42421565  6.45273251  9.19715537  0.          0.
+  0.         25.03798193  0.          4.33340901]

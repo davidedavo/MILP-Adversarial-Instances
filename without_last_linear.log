@@ -1,0 +1,3172 @@
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\torchvision\io\image.py:11: UserWarning: Failed to load image Python extension: Could not find module 'C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\Lib\site-packages\torchvision\image.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+  warn(f"Failed to load image Python extension: {e}")
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\setuptools\distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+Global seed set to 42
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\torch\nn\modules\lazy.py:178: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+  warnings.warn('Lazy modules are a new feature under heavy development '
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+--- SETUP DATAMODULE stage:fit ---
+Restoring states from the checkpoint path at checkpoint/4f2c5994ac3fcfd95bbb50d6b741cb76/last.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+wandb: Currently logged in as: davoli (use `wandb login --relogin` to force relogin)
+wandb: Tracking run with wandb version 0.12.9
+
+wandb: Resuming run 4f2c5994ac3fcfd95bbb50d6b741cb76
+wandb:  View project at https://wandb.ai/davoli/Adversarial%20Learning
+wandb:  View run at https://wandb.ai/davoli/Adversarial%20Learning/runs/4f2c5994ac3fcfd95bbb50d6b741cb76
+wandb: Run data is saved locally in C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\wandb\run-20220114_122301-4f2c5994ac3fcfd95bbb50d6b741cb76
+wandb: Run `wandb offline` to turn off syncing.
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\pytorch_lightning\trainer\connectors\checkpoint_connector.py:247: UserWarning: You're resuming from a checkpoint that ended mid-epoch. Training will start from the beginning of the next epoch. This can cause unreliable results if further training is done, consider using an end of epoch checkpoint.
+  rank_zero_warn(
+Validation sanity check: 0it [00:00, ?it/s]Restored all states from the checkpoint file at checkpoint/4f2c5994ac3fcfd95bbb50d6b741cb76/last.ckpt
+
+  | Name       | Type             | Params
+------------------------------------------------
+0 | classifier | CNN              | 7.0 K 
+1 | loss       | CrossEntropyLoss | 0     
+2 | accuracy   | Accuracy         | 0     
+------------------------------------------------
+7.0 K     Trainable params
+0         Non-trainable params
+7.0 K     Total params
+0.028     Total estimated model params size (MB)
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\pytorch_lightning\callbacks\model_checkpoint.py:631: UserWarning: Checkpoint directory C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\checkpoint\4f2c5994ac3fcfd95bbb50d6b741cb76 exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+C:\Users\david\Documents\Davide\Universita\magistrale\1 anno\Automated Decision Making\Esame\.venv\lib\site-packages\pytorch_lightning\trainer\data_loading.py:116: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Validation sanity check:   0%|          | 0/2 [00:00<?, ?it/s]Validation sanity check:  50%|?????     | 1/2 [00:02<00:02,  2.49s/it]                                                                      Global seed set to 42
+Set parameter Username
+Academic license - for non-commercial use only - expires 2022-02-25
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x934a4520
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 3.34s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 3.40 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5358.31 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.358307685860e+03, best bound 5.358307685860e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x9b4557dd
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.74s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.78 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7027.78 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.027779367632e+03, best bound 7.027779367632e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xae697c6b
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [6e-04, 6e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.56s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.61 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 3848.45 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.848452198412e+03, best bound 3.848452198412e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x39033fcb
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 3.44s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 3.49 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7365.86 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.365857180787e+03, best bound 7.365857180787e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x57eb711d
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.59s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.64 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5518.05 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.518046176812e+03, best bound 5.518046176812e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xc999e3f7
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 6e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.26s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.30 seconds (1.41 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4309.46 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.309461453703e+03, best bound 4.309461453703e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xc6d04762
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.35s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.39 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5934.5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.934496006446e+03, best bound 5.934496006446e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x85161496
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.13s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.16 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5849.26 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.849256446557e+03, best bound 5.849256446557e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x10d12966
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.73s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.78 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7189.96 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.189957531408e+03, best bound 7.189957531408e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x3d62513b
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [8e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.96s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 3.02 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6471.42 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.471418030164e+03, best bound 6.471418030164e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x6a9803ba
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.65s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.70 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7439.09 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.439090355332e+03, best bound 7.439090355332e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x7320ee03
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.32s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.37 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6947.04 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.947037415831e+03, best bound 6.947037415831e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xe3bb937c
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.35s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.39 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5779.47 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.779469367038e+03, best bound 5.779469367038e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xe229dcd6
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.46s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.50 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7041.06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.041058234985e+03, best bound 7.041058234985e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x98054ef6
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.19s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.24 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4698.02 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.698020937596e+03, best bound 4.698020937596e+03, gap 0.0000%
+The two models don't match
+pred_nn: 1; pred_milp:1
+output_nn: [[-5.2270226  15.046191   -2.0574195   1.997847    1.3240123   0.9393285
+  -3.9518485   0.7379584  -0.04213823 -3.5042706 ]]
+output_milp: [-5.22702322 15.04619119 -2.05741825  1.99784715  1.32401264  0.93932818
+ -3.9518488   0.73795838 -0.04213732 -3.50427017]
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xd1e8e56a
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.96s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.99 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6805.84 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.805844480223e+03, best bound 6.805844480223e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x45911f52
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.43s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.48 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6118.16 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.118160219811e+03, best bound 6.118160219811e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xd8e60ef4
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.28s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.33 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6004.5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.004499914923e+03, best bound 6.004499914923e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x9ac68307
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.40s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.45 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 8369.72 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.369715571609e+03, best bound 8.369715571609e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xe9b1beef
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.30s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.35 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5000.6 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000600843936e+03, best bound 5.000600843936e+03, gap 0.0000%
+The two models don't match
+pred_nn: 4; pred_milp:4
+output_nn: [[-16.406496    -1.099645    -0.06413543   0.15356988  23.878174
+   -2.6592734  -10.125241     8.443705     0.09596276   0.98431927]]
+output_milp: [-16.40649641  -1.09964502  -0.06413581   0.15357166  23.87817271
+  -2.65927403 -10.12524144   8.44370402   0.09596353   0.98431816]
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x04611969
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.61s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.65 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5837.61 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.837605279704e+03, best bound 5.837605279704e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x5534dc04
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.32s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.36 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6073.03 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.073033191608e+03, best bound 6.073033191608e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xafa915de
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.32s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.36 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6257.46 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.257458222983e+03, best bound 6.257458222983e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xec6f97e6
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.42s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.47 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6173.35 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.173352977940e+03, best bound 6.173352977940e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x36b571cf
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [8e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.29s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.34 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4591.35 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.591347572105e+03, best bound 4.591347572105e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x9657bcfe
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-05, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.41s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.46 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 8698.42 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.698422098925e+03, best bound 8.698422098925e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xf4f7f51a
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.20s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.25 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4906.22 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.906221082645e+03, best bound 4.906221082645e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x9d3b476d
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.40s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.44 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5949.71 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.949712286542e+03, best bound 5.949712286542e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x41049a33
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.43s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.48 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7466.3 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.466299750645e+03, best bound 7.466299750645e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x230bfa9f
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.24s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.29 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4488.8 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.488798388404e+03, best bound 4.488798388404e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x9b653f23
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [6e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.26s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.30 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6240.22 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.240222674204e+03, best bound 6.240222674204e+03, gap 0.0000%
+The two models don't match
+pred_nn: 3; pred_milp:3
+output_nn: [[ -9.34947     -8.207287    -0.10656917  29.61181    -13.282805
+    7.2727766  -17.562258     6.0429883   -3.2042508   13.305688  ]]
+output_milp: [ -9.34947078  -8.20728982  -0.10656775  29.6118091  -13.28280823
+   7.27277858 -17.5622574    6.04298913  -3.20424951  13.30568884]
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xaee0c0c6
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.15s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.19 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4278.56 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.278558687596e+03, best bound 4.278558687596e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x3bb5cf46
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.16s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.21 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6812.05 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.812052632427e+03, best bound 6.812052632427e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x955950e0
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.19s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.24 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6365.76 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.365758861929e+03, best bound 6.365758861929e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x828fea6d
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.61s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.65 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6145.98 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.145975131403e+03, best bound 6.145975131403e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x238fc882
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 0.99s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.00 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7359.87 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.359868152123e+03, best bound 7.359868152123e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xd91d4c9d
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 0.91s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.93 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6016.92 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.016922289919e+03, best bound 6.016922289919e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xf5430087
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.40s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.42 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4483.87 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.483865538346e+03, best bound 4.483865538346e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x4c0ad708
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.42s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.45 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5606.3 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.606303177662e+03, best bound 5.606303177662e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xcad15f04
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.32s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.35 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4763.06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.763062559423e+03, best bound 4.763062559423e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x0e2b61d5
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-03, 6e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.25s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.27 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 3471.08 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.471081554408e+03, best bound 3.471081554408e+03, gap 0.0000%
+The two models don't match
+pred_nn: 1; pred_milp:1
+output_nn: [[-5.299339   12.673745   -0.02893007  0.59059316  1.4461346  -3.448953
+  -6.0438237   2.9638195   0.8605894  -1.0785509 ]]
+output_milp: [-5.2993395  12.67374426 -0.02892937  0.5905943   1.44613345 -3.44895274
+ -6.04382387  2.96381913  0.86058941 -1.07855121]
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x8995595d
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.31s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.34 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5261.22 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.261215717560e+03, best bound 5.261215717560e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xb2ba7fec
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.34s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.36 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5802.93 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.802930552926e+03, best bound 5.802930552926e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x34f4970b
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.38s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.41 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5256.42 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.256420217715e+03, best bound 5.256420217715e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x6d8244df
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.10s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.12 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5476.49 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.476491196074e+03, best bound 5.476491196074e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xa2a87f8a
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.20s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.22 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5923.81 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.923805526554e+03, best bound 5.923805526554e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x1566360d
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [6e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.05s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.08 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5317.83 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.317833155938e+03, best bound 5.317833155938e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x5a1ec1fb
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.07s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.10 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5325.67 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.325671479200e+03, best bound 5.325671479200e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xe8636bc1
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.51s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.55 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6914.92 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.914919869389e+03, best bound 6.914919869389e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x8089b564
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.37s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.39 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6297.27 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.297273638503e+03, best bound 6.297273638503e+03, gap 0.0000%
+The two models don't match
+pred_nn: 4; pred_milp:4
+output_nn: [[-7.2226     -7.7708592  -0.02879322 -5.8935466  18.284756   -3.215266
+  -1.08667     3.0623825   2.5318973   7.5555325 ]]
+output_milp: [-7.22260054 -7.77085924 -0.02879374 -5.89354615 18.28475577 -3.21526627
+ -1.08667029  3.06238319  2.53189747  7.55553037]
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xcf645ae9
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.35s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.44 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5654.11 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.654112232694e+03, best bound 5.654112232694e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x9031ff87
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.29s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.31 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 8347.29 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.347290251919e+03, best bound 8.347290251919e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x7d40c9a8
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.32s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.34 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6605.52 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.605522550467e+03, best bound 6.605522550467e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x9e50aedd
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 6e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.30s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.33 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5708.45 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.708451777370e+03, best bound 5.708451777370e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x94182be3
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.39s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.41 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 8097.35 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.097352652593e+03, best bound 8.097352652593e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x12a4c3b6
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.31s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.34 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6737.84 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.737837908774e+03, best bound 6.737837908774e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xefc33fc1
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.39s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.42 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6549.11 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.549109543178e+03, best bound 6.549109543178e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x15db1dba
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.21s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.24 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 3994.07 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.994068691661e+03, best bound 3.994068691661e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x0cba9ea3
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-05, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.34s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.37 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6394.69 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.394693988227e+03, best bound 6.394693988227e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x64bf56c7
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.28s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.30 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4630.63 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.630630465134e+03, best bound 4.630630465134e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x87c7235f
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.31s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.33 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6258.44 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.258438535312e+03, best bound 6.258438535312e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xdb5222aa
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 2.23s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.32 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7240.36 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.240364538150e+03, best bound 7.240364538150e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x9a748baf
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-05, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.02s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.04 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4786.65 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.786652659677e+03, best bound 4.786652659677e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xe88f9a7d
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.36s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.38 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6350.76 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.350759332062e+03, best bound 6.350759332062e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xb95182f3
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.58s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.61 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7304.79 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.304792217924e+03, best bound 7.304792217924e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xc9c715f3
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.54s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.56 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4531.03 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.531026328371e+03, best bound 4.531026328371e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xd6aa5e10
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.69s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.72 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6270.95 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.270952201375e+03, best bound 6.270952201375e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x2924afd7
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.68s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.71 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5955.85 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.955848934807e+03, best bound 5.955848934807e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x1f650f38
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.70s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.74 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7200.92 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.200917405654e+03, best bound 7.200917405654e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x3ce4189e
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.68s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.71 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7641.61 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.641605285125e+03, best bound 7.641605285125e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x93d8ddcf
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.34s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.37 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6160.07 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.160066339408e+03, best bound 6.160066339408e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xf2026f09
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.68s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.71 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 8351.84 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.351841549959e+03, best bound 8.351841549959e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x813c3f7f
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.51s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.53 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7244.52 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.244523279906e+03, best bound 7.244523279906e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x207cb21c
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.28s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.31 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6000.59 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.000586398351e+03, best bound 6.000586398351e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xee2c5152
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.64s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.67 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4448.88 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.448883452192e+03, best bound 4.448883452192e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x8e6ddfb6
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.01s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.03 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6042.44 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.042437598337e+03, best bound 6.042437598337e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x3bbd7991
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.80s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.83 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5766.84 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.766837784871e+03, best bound 5.766837784871e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x933b21c1
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.95s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.98 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5862.07 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.862071350977e+03, best bound 5.862071350977e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xa68d80ed
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.26s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.28 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5268.27 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.268271822103e+03, best bound 5.268271822103e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x51d5e295
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.22s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.24 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6860.23 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.860232917587e+03, best bound 6.860232917587e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x19c3c258
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.33s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.35 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5534.46 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.534457743458e+03, best bound 5.534457743458e+03, gap 0.0000%
+The two models don't match
+pred_nn: 7; pred_milp:7
+output_nn: [[ -8.150379    -1.879733    -4.455113    -0.15998107   5.2707987
+   -0.17032814 -19.086065    17.050785    -0.54001987   9.804752  ]]
+output_milp: [ -8.15037953  -1.87973238  -4.45511288  -0.15998386   5.27079842
+  -0.17032699 -19.08606489  17.05078452  -0.54001868   9.80475266]
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x23f345a3
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.52s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.55 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6276.85 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.276853846339e+03, best bound 6.276853846339e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x2b968a56
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.45s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.47 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7325.07 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.325070356084e+03, best bound 7.325070356084e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xb24fd327
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.31s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.33 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5189.07 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.189073198250e+03, best bound 5.189073198250e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xa1cd3e4d
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.44s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.47 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6975.46 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.975464283203e+03, best bound 6.975464283203e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xcb185be3
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.54s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.57 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6974.53 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.974526605039e+03, best bound 6.974526605039e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x945061ab
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.03s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.05 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5678.23 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.678225607131e+03, best bound 5.678225607131e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x8d25ac91
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-05, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.01s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.02 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6800.67 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.800669458974e+03, best bound 6.800669458974e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xdbad0d45
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.77s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.80 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6623.45 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.623448438345e+03, best bound 6.623448438345e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x8db2a4b9
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.68s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.71 seconds (1.41 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4611.33 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.611327479033e+03, best bound 4.611327479033e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xe81f2f3e
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.80s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.83 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6824.31 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.824306934871e+03, best bound 6.824306934871e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x0f20fc25
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.76s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.80 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5789.67 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.789670792388e+03, best bound 5.789670792388e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x87e9557a
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-04, 6e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.94s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.97 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4631.69 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.631692901517e+03, best bound 4.631692901517e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x169f209c
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 0.98s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.00 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6769.83 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.769833277294e+03, best bound 6.769833277294e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x8e497f37
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [4e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.83s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.86 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5373.36 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.373357404798e+03, best bound 5.373357404798e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xbd0b3415
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.91s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.94 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7334.79 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.334794974592e+03, best bound 7.334794974592e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xe7f980e5
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.77s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.81 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4508.05 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.508051369350e+03, best bound 4.508051369350e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xb46c5ed2
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.95s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.99 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6704.98 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.704979101134e+03, best bound 6.704979101134e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x52454af6
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.90s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.93 seconds (1.41 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6283.62 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.283619834632e+03, best bound 6.283619834632e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x14ab0c01
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.86s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.90 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6858.65 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.858652048327e+03, best bound 6.858652048327e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x4ecaf4a7
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.85s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.88 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5455.38 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.455376965927e+03, best bound 5.455376965927e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x912bbddb
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.03s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.05 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6925.27 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.925269737934e+03, best bound 6.925269737934e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xabb338f2
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [6e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.02s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.05 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7216.32 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.216315195673e+03, best bound 7.216315195673e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xaa9f5a66
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.66s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.69 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6390.86 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.390857206683e+03, best bound 6.390857206683e+03, gap 0.0000%
+The two models don't match
+pred_nn: 4; pred_milp:4
+output_nn: [[-7.7779984   1.397894    0.09023726 -7.9816523  28.763514   -2.6163054
+  -9.068016   -0.51076084  0.72552323  2.5937338 ]]
+output_milp: [-7.77799799  1.397894    0.09023546 -7.98165422 28.7635131  -2.6163054
+ -9.0680145  -0.51075948  0.72552331  2.59373369]
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x86a9c158
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.96s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 2.00 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6381.5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.381500004390e+03, best bound 6.381500004390e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x171a9071
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-05, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.08s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.10 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5869.04 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.869038751843e+03, best bound 5.869038751843e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x94ad2223
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.08s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.11 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7265.34 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.265338131351e+03, best bound 7.265338131351e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x0c22dbcc
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.89s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.93 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4386.58 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.386579999441e+03, best bound 4.386579999441e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x803026b1
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-05, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.76s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.80 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5740.52 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.740520546216e+03, best bound 5.740520546216e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xd2b96b4e
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 0.94s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.95 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5801.18 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.801177086818e+03, best bound 5.801177086818e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x11f9fe26
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.02 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6722.73 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.722727300409e+03, best bound 6.722727300409e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x17c4fb0a
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 0.92s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.94 seconds (1.41 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4963.75 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.963748471768e+03, best bound 4.963748471768e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xbcd1668f
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.05s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.06 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5541.57 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.541568633330e+03, best bound 5.541568633330e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x21539237
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.73s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.77 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5934.58 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.934575498456e+03, best bound 5.934575498456e+03, gap 0.0000%
+The two models don't match
+pred_nn: 9; pred_milp:9
+output_nn: [[-12.230854    -9.772369     0.12310231   4.890886     3.3179214
+   -3.9886966  -14.408477     7.144795     6.84332     21.51061   ]]
+output_milp: [-12.23085165  -9.77237094   0.12310104   4.89088578   3.31792011
+  -3.98869565 -14.40847414   7.1447961    6.84331929  21.51060785]
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x822a322b
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.72s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.76 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5321.24 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.321238008723e+03, best bound 5.321238008723e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xacf8a5fd
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.72s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.75 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5163.94 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.163939696472e+03, best bound 5.163939696472e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xb91977f7
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-05, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.60s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.61 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4811.02 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.811015513149e+03, best bound 4.811015513149e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x66e57947
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.59s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.63 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6251.22 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.251217930761e+03, best bound 6.251217930761e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xa5bfc4f4
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.74s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.78 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5153.3 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.153300710015e+03, best bound 5.153300710015e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x059c6e75
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.80s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.82 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6750.18 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.750183613541e+03, best bound 6.750183613541e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xc504ca86
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.03s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.04 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 8063.18 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.063181075100e+03, best bound 8.063181075100e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x1871fc3e
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [8e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 0.95s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.98 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5580.67 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.580672076755e+03, best bound 5.580672076755e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xdd45a947
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.69s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.72 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 4788.09 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.788086456435e+03, best bound 4.788086456435e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x23e8eb3a
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.77s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.80 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6267.19 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.267190068463e+03, best bound 6.267190068463e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xea0107af
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [7e-04, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 0.97s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.98 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6094.88 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.094876658580e+03, best bound 6.094876658580e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x79f60022
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [8e-04, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.77s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.82 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 5547.02 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.547018711998e+03, best bound 5.547018711998e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0xcf19d74b
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e-03, 7e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.94s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.97 seconds (1.43 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 7556.58 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.556577024146e+03, best bound 7.556577024146e+03, gap 0.0000%
+The two models match
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 14624 rows, 44448 columns and 692800 nonzeros
+Model fingerprint: 0x041cb398
+Model has 29824 general constraints
+Variable types: 29824 continuous, 14624 integer (14624 binary)
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e-03, 8e+00]
+  GenCon coe range [1e+00, 1e+00]
+Presolve removed 14624 rows and 44448 columns
+Presolve time: 1.75s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 1.79 seconds (1.42 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 6859.12 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.859118606844e+03, best bound 6.859118606844e+03, gap 0.0000%
+The two models match
+---------- RESULTS ------------
+PyTorch model accuracy over first batch: 0.984375
+MILP model accuracy over first batch: 0.984375
+
+wandb: Waiting for W&B process to finish, PID 18840... (success).
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.12MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.12MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.12MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.12MB uploaded (0.00MB deduped)wandb: / 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb: - 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb: \ 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb: | 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb: / 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb: - 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb: \ 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb: | 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb: / 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb: - 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb: \ 0.12MB of 0.12MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Run summary:
+wandb:                 epoch 19
+wandb:        train_accuracy 0.9932
+wandb:            train_loss 0.0095
+wandb:   trainer/global_step 8599
+wandb:          val_accuracy 0.9882
+wandb:              val_loss 0.03996
+wandb: 
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced 4f2c5994ac3fcfd95bbb50d6b741cb76: https://wandb.ai/davoli/Adversarial%20Learning/runs/4f2c5994ac3fcfd95bbb50d6b741cb76
+wandb: Find logs at: .\wandb\run-20220114_122301-4f2c5994ac3fcfd95bbb50d6b741cb76\logs\debug.log
+wandb: 

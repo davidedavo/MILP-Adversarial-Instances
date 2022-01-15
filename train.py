@@ -40,21 +40,34 @@ def get_args():
 def milp_test(model, dataloader, check_models_match=False):
     correct = 0
     tot = 0
+    correct_nn = 0
     for x_batch, y_batch in dataloader:
         for x, y in zip(x_batch, y_batch):
-            milp_model = MILPModel(model, x)
+            milp_model = MILPModel(model, x, y, 10, include_last_layer=True)
             output_milp = milp_model.optimize()
             y_pred_milp = np.argmax(output_milp)
             if check_models_match:
                 output_nn = model(x.unsqueeze(0)).detach().numpy()
                 ok = np.allclose(output_milp, output_nn)
                 y_pred_nn = np.argmax(output_nn)
+                correct_nn += 1 if y_pred_nn == y else 0
                 if not ok:
-                    raise ValueError("I due modelli non corrisondono")
+                    print("The two models don't match")
+                    print(f"pred_nn: {y_pred_nn}; pred_milp:{y_pred_milp}")
+                    print(f"output_nn: {output_nn}")
+                    print(f"output_milp: {output_milp}")
+                else:
+                    print("The two models match")
             tot += 1
             if y == y_pred_milp:
                 correct += 1
-        return correct / tot
+        accuracy_milp = correct / tot
+        print("---------- RESULTS ------------")
+        if check_models_match:
+            acc_nn = correct_nn / tot
+            print(f"PyTorch model accuracy over first batch: {accuracy_milp}")
+        print(f"MILP model accuracy over first batch: {accuracy_milp}")
+        return accuracy_milp
 
 
 def train(run_id, layer_1_dim, layer_2_dim, lr, batch_size):
@@ -86,13 +99,15 @@ def train(run_id, layer_1_dim, layer_2_dim, lr, batch_size):
     )
 
     # train
-    ckpt_path = f"checkpoint/{run_id}/last.ckpt"
-    if os.path.exists(ckpt_path):
-        trainer.fit(model, datamodule=mnist, ckpt_path=ckpt_path)
+    last_ckpt_path = f"checkpoint/{run_id}/last.ckpt"
+    if os.path.exists(last_ckpt_path):
+        trainer.fit(model, datamodule=mnist, ckpt_path=last_ckpt_path)
     else:
         trainer.fit(model, datamodule=mnist)
-    accuracy = milp_test(model, mnist.test_dataloader())
-    print(f"milp accuracy:{accuracy}")
+
+    best_ckpt_path = f"checkpoint/{run_id}/best.ckpt"
+    model.load_from_checkpoint(best_ckpt_path)
+    accuracy = milp_test(model, mnist.test_dataloader(), check_models_match=True)
     # trainer.test(model, datamodule=mnist, ckpt_path="best")
     return model
 
