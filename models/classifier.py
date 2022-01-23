@@ -6,10 +6,10 @@ import torchmetrics
 
 
 class Classifier(pl.LightningModule):
-    def __init__(self, in_channels, layer_1_dim, layer_2_dim, lr, num_classes=10):
+    def __init__(self, classifier, in_channels, layer_1_dim, layer_2_dim, lr, num_classes=10):
         super().__init__()
         self.save_hyperparameters()
-        self.classifier = CNN(in_channels, layer_1_dim, layer_2_dim, num_classes)
+        self.classifier = classifier(in_channels, layer_1_dim, layer_2_dim, num_classes)
         self.loss = nn.CrossEntropyLoss()
         self.accuracy = torchmetrics.Accuracy()
         self.learning_rate = lr

@@ -36,6 +36,9 @@ class MILPModel:
         self.s = []
         self.z = []
         self.model = Model("AdversarialInstance")
+        # self.model.setParam(GRB.Param.FeasibilityTol, 1e-2)
+        # self.model.setParam(GRB.Param.IntFeasTol, 1e-1)
+        # self.model.setParam(GRB.Param.MIPGap, 1)
         self.layers = torch_model.get_layers()
         self.build_milp()
 
@@ -45,7 +48,16 @@ class MILPModel:
             lab = randint(0, self.n_classes - 1)
         return lab
 
+    def calc_upper_bounds(self):
+        pass
+
     def build_milp(self):
+        iC, iH, iW = self.input.shape
+        self.x_adv = self.addContinuous(self.input.shape, name_prefix="x_adv", lb=float("-inf"))
+        self.d = self.addContinuous(self.input.shape, name_prefix="d", lb=0)
+        self.model.addConstrs((-self.d[c,h,w] <= self.x_adv[c,h,w] - self.input[c,h,w] for c in range(iC) for h in range(iH) for w in range(iW)), name=f"absconstr_lb")
+        self.model.addConstrs((self.x_adv[c,h,w] - self.input[c,h,w] <= self.d[c,h,w] for c in range(iC) for h in range(iH) for w in range(iW)), name=f"absconstr_ub")
+        input = self.x_adv
         input = self.input
         layers = self.layers if self.include_last_layer else self.layers[:-1]
         for i, layer in enumerate(layers):
@@ -59,7 +71,7 @@ class MILPModel:
                 if len(layers) > i + 1 and isinstance(layers[i + 1], nn.ReLU):
                     self.add_fc_layer(layer, input, relu=True)
                 else:
-                    self.add_fc_layer(layer, input, relu=True)
+                    self.add_fc_layer(layer, input, relu=False)
             elif isinstance(layer, nn.ReLU):
                 pass
             elif isinstance(layer, nn.MaxPool2d):
@@ -70,10 +82,14 @@ class MILPModel:
                 raise TypeError("Layer not supported")
             input = self.a[-1]
 
-        x = self.a[:-1] if self.include_last_layer else self.a
-        self.model.setObjective(sum([a.sum() for a in self.a]), GRB.MINIMIZE)
-        self.model.write("model.lp")
-        # self.setAdversarialProblem()
+        preds = self.a[-1]
+        adv_label = self.get_adversarial_label()
+        self.model.addConstrs((preds[adv_label] >= preds[i] for i in range(self.n_classes) if i != adv_label),
+                              name=f"pred_constr")
+        self.model.setObjective(self.d.sum(), GRB.MINIMIZE)
+        #x = self.a[:-1] if self.include_last_layer else self.a
+        #self.model.setObjective(sum([x.sum() for x in self.a]), GRB.MINIMIZE)
+        #self.model.write("model.lp")
 
     def optimize(self):
         self.model.optimize()
@@ -94,15 +110,14 @@ class MILPModel:
         adv_label = self.get_adversarial_label()
         self.model.addConstrs((preds[adv_label] >= 1.2 * preds[i] for i in range(self.n_classes) if i != adv_label),
                               name=f"pred_constr")
-        self.model.setObjective(self.d.sum(), GRB.MINIMIZE)
-        self.model.write("model_relu.lp")
+        self.model.setObjective(self.d.sum() + sum([x.sum() for x in self.a]), GRB.MINIMIZE)
 
     def addContinuous(self, shape, name_prefix, lb=None, ub=None):
         return self.model.addMVar(shape=shape, vtype=GRB.CONTINUOUS, name=f'{name_prefix}_{self.current_layer}', lb=lb,
                                   ub=ub)
 
-    def addBinary(self, shape, name_prefix, lb=0):
-        return self.model.addMVar(shape=shape, vtype=GRB.BINARY, name=f'{name_prefix}_{self.current_layer}', lb=lb)
+    def addBinary(self, shape, name_prefix, *args, **kwargs):
+        return self.model.addMVar(shape=shape, vtype=GRB.BINARY, name=f'{name_prefix}_{self.current_layer}')
 
     def add_conv2D_layer(self, conv2d: nn.Conv2d, x, relu):
         assert conv2d.padding == (0, 0)
@@ -121,7 +136,8 @@ class MILPModel:
         kernel = conv2d.weight.data.detach().numpy()
         bias = conv2d.bias.data.detach().numpy()
 
-        self.a.append(self.addContinuous(shape=(oC, oH, oW), name_prefix=f'a'))
+        lb = 0 if relu else float('-inf')
+        self.a.append(self.addContinuous(shape=(oC, oH, oW), name_prefix=f'a', lb=lb))
 
         y = self.a[-1]
 
@@ -156,7 +172,8 @@ class MILPModel:
         in_features = weights.shape[1]
         out_features = layer.out_features
 
-        self.a.append(self.addContinuous(shape=(out_features,), name_prefix='a'))  # activation
+        lb = 0 if relu else float('-inf')
+        self.a.append(self.addContinuous(shape=(out_features,), name_prefix='a', lb=lb))  # activation
         y = self.a[-1]
         s = None
         if relu:
@@ -174,7 +191,7 @@ class MILPModel:
         for i in range(out_features):
             rhs = y[i] - s[i] if s else y[i]
             self.model.addConstr((sum(weights[i, j] * x.element_at(j) for j in range(in_features)) + bias[i] == rhs),
-                                  name=f"fc_{self.current_layer}")
+                                 name=f"fc_{self.current_layer}_{i}")
 
     def add_maxpool2D_layer(self, layer: nn.MaxPool2d, x):
         assert layer.padding == 0
@@ -186,7 +203,6 @@ class MILPModel:
         oH = (iH - k) // stride + 1
         oW = (iW - k) // stride + 1
 
-        self.current_layer += 1
         self.a.append(
             self.addContinuous(shape=(C, oH, oW), name_prefix=f'a', lb=0))
         y = self.a[-1]

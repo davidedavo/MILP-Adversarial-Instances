@@ -21,3 +21,19 @@ class CNN(nn.Module):
         x = self.flatten(x)
         x = self.fc_block(x)
         return x
+
+class DNN(nn.Module):
+    def __init__(self, in_channels, layer_1_dim, layer_2_dim, n_classes):
+        super().__init__()
+        self.seq = nn.Sequential(
+            nn.Flatten(),
+            nn.LazyLinear(out_features=layer_1_dim),
+            nn.ReLU(),
+            nn.Linear(in_features=layer_1_dim, out_features=layer_2_dim),
+            nn.ReLU(),
+            nn.Linear(layer_2_dim, n_classes)
+        )
+
+    def forward(self, x):
+        x = self.seq(x)
+        return x

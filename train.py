@@ -1,11 +1,13 @@
 import os
+import time
 
 from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 import wandb
 import pytorch_lightning as pl
 import argparse
 from data.datamodule import MNISTDataModule
-from milp.milp import MILPModel
+from milp import milp
+from milp.milp_ref import MILPModel
 from models.classifier import Classifier
 from pytorch_lightning.loggers import WandbLogger
 from pytorch_lightning import seed_everything
@@ -13,7 +15,8 @@ from pytorch_lightning.callbacks import ModelCheckpoint
 import numpy as np
 import matplotlib.pyplot as plt
 
-from utils.utils import dict_hash
+from models.cnn import DNN, CNN
+from utils.utils import dict_hash, get_runid_by_args
 
 seed_everything(42, workers=True)
 
@@ -25,6 +28,8 @@ LR = 0.09964
 
 def get_args():
     parser = argparse.ArgumentParser(description="Training")
+    parser.add_argument('--classifier', choices=['CNN', 'DNN'], default='CNN',
+                        help='Classifier name.')
     parser.add_argument('-b', '--batch_size', type=int, default=BATCH_SIZE, metavar='N',
                         help='input batch size (default: 128)')
     parser.add_argument('-l', '--learning_rate', type=float, default=LR, metavar='F',
@@ -43,8 +48,15 @@ def milp_test(model, dataloader, check_models_match=False):
     correct_nn = 0
     for x_batch, y_batch in dataloader:
         for x, y in zip(x_batch, y_batch):
-            milp_model = MILPModel(model, x, y, 10, include_last_layer=True)
+            start = time.time()
+            milp_model = milp.MILPModel(model, x, y, 10)
+            #milp_model = MILPModel(model, x, y, 10)
+            #milp_model.buildAdversarialProblem()
+
             output_milp = milp_model.optimize()
+            end=time.time()
+            print(f"Nuovo: {end-start}")
+
             y_pred_milp = np.argmax(output_milp)
             if check_models_match:
                 output_nn = model(x.unsqueeze(0)).detach().numpy()
@@ -70,8 +82,11 @@ def milp_test(model, dataloader, check_models_match=False):
         return accuracy_milp
 
 
-def train(run_id, layer_1_dim, layer_2_dim, lr, batch_size):
+def train(run_id, classifier, layer_1_dim, layer_2_dim, lr, batch_size, force_train=False):
     # set up W&B logger
+    if not run_id:
+        run_id = wandb.util.generate_id()
+
     wandb_logger = WandbLogger(project='Adversarial Learning', entity="davoli", log_model="all", name=run_id,
                                id=run_id)  # log all
     checkpoint_callback = ModelCheckpoint(dirpath=f"checkpoint/{run_id}", filename="best", monitor='val_accuracy',
@@ -83,6 +98,7 @@ def train(run_id, layer_1_dim, layer_2_dim, lr, batch_size):
 
     # setup model - note how we refer to sweep parameters with wandb.config
     model = Classifier(
+        classifier=classifier,
         in_channels=1,
         layer_1_dim=layer_1_dim,
         layer_2_dim=layer_2_dim,
@@ -114,5 +130,9 @@ def train(run_id, layer_1_dim, layer_2_dim, lr, batch_size):
 
 if __name__ == '__main__':
     args = get_args()
-    run_hash = dict_hash(args)
-    model = train(run_hash, args["layer_1_dim"], args["layer_2_dim"], args["learning_rate"], args["batch_size"])
+    run_hash = get_runid_by_args(args)
+    classifier = CNN
+    if args["classifier"] == "DNN":
+        classifier = DNN
+
+    model = train(run_hash, classifier, args["layer_1_dim"], args["layer_2_dim"], args["learning_rate"], args["batch_size"])

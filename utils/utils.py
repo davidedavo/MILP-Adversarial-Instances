@@ -2,6 +2,7 @@ from typing import Dict, Any
 import hashlib
 import json
 
+
 def dict_hash(dictionary: Dict[str, Any]) -> str:
     """MD5 hash of a dictionary."""
     dhash = hashlib.md5()
@@ -10,3 +11,7 @@ def dict_hash(dictionary: Dict[str, Any]) -> str:
     encoded = json.dumps(dictionary, sort_keys=True).encode()
     dhash.update(encoded)
     return dhash.hexdigest()
+
+
+def get_runid_by_args(args):
+    return f"{args['classifier']}_{args['layer_1_dim']}_{args['layer_2_dim']}"
