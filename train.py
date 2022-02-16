@@ -1,13 +1,17 @@
+import json
 import os
 import time
 
+import torch
 from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 import wandb
 import pytorch_lightning as pl
 import argparse
+
+from tqdm import tqdm
+
 from data.datamodule import MNISTDataModule
-from milp import milp
-from milp.milp_ref import MILPModel
+from milp.milp_model import MILPModel
 from models.classifier import Classifier
 from pytorch_lightning.loggers import WandbLogger
 from pytorch_lightning import seed_everything
@@ -16,79 +20,101 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from models.cnn import DNN, CNN
-from utils.utils import dict_hash, get_runid_by_args
+from utils import get_adversarial_label, AdversarialLogger
 
 seed_everything(42, workers=True)
 
-BATCH_SIZE = 128
-LAYER_1_DIM = 16
-LAYER_2_DIM = 128
+BATCH_SIZE = 32
 LR = 0.09964
+
+config = {
+    "conv_layers": [],
+    "linear_layers": [],
+    "kernel_sizes": 19,
+    "max_pool2d": 0,
+    "lr": LR
+}
 
 
 def get_args():
     parser = argparse.ArgumentParser(description="Training")
-    parser.add_argument('--classifier', choices=['CNN', 'DNN'], default='CNN',
+    parser.add_argument('--classifier', choices=['CNN_1x4', 'DNN_8x8'], default='CNN_8',
                         help='Classifier name.')
-    parser.add_argument('-b', '--batch_size', type=int, default=BATCH_SIZE, metavar='N',
-                        help='input batch size (default: 128)')
-    parser.add_argument('-l', '--learning_rate', type=float, default=LR, metavar='F',
-                        help='learning rate for training (default: 0.09964)')
-    parser.add_argument('--layer_1_dim', type=int, default=LAYER_1_DIM, metavar='N',
-                        help='dimension of first layer (default: 16)')
-    parser.add_argument('--layer_2_dim', type=int, default=LAYER_2_DIM, metavar='N',
-                        help='dimension of second layer (default: 128)')
     args = parser.parse_args()
     return vars(args)
 
 
-def milp_test(model, dataloader, check_models_match=False):
-    correct = 0
-    tot = 0
-    correct_nn = 0
-    for x_batch, y_batch in dataloader:
-        for x, y in zip(x_batch, y_batch):
-            start = time.time()
-            milp_model = milp.MILPModel(model, x, y, 10)
-            #milp_model = MILPModel(model, x, y, 10)
-            #milp_model.buildAdversarialProblem()
+def milp_test(model, trainer, dataloader, bounds, global_step, n_adv=3, policy="random", log_images=False):
+    diffs = []
+    logger = AdversarialLogger(trainer, policy)
 
-            output_milp = milp_model.optimize()
-            end=time.time()
-            print(f"Nuovo: {end-start}")
+    index = 0
+    for batch_id, (x_batch, y_batch) in enumerate(dataloader):
+        for image_id, (x, y_true) in tqdm(enumerate(zip(x_batch, y_batch))):
+            output_nn = model(x.unsqueeze(0))
+            y_pred = output_nn.argmax(dim=1)
+            x_numpy = x.detach().numpy()
+            if y_true != y_pred:
+                continue
 
-            y_pred_milp = np.argmax(output_milp)
-            if check_models_match:
-                output_nn = model(x.unsqueeze(0)).detach().numpy()
-                ok = np.allclose(output_milp, output_nn)
-                y_pred_nn = np.argmax(output_nn)
-                correct_nn += 1 if y_pred_nn == y else 0
-                if not ok:
-                    print("The two models don't match")
-                    print(f"pred_nn: {y_pred_nn}; pred_milp:{y_pred_milp}")
-                    print(f"output_nn: {output_nn}")
-                    print(f"output_milp: {output_milp}")
-                else:
-                    print("The two models match")
-            tot += 1
-            if y == y_pred_milp:
-                correct += 1
-        accuracy_milp = correct / tot
-        print("---------- RESULTS ------------")
-        if check_models_match:
-            acc_nn = correct_nn / tot
-            print(f"PyTorch model accuracy over first batch: {accuracy_milp}")
-        print(f"MILP model accuracy over first batch: {accuracy_milp}")
-        return accuracy_milp
+            adv_images = []
+            adv_labels = []
+            diffs_example = []
+
+            start_setup = time.time()
+            milp_model = MILPModel(model, x_numpy, y_true.item(), 10, bounds)
+            milp_model.setup()
+            end_setup = time.time()
+            setup_time = end_setup - start_setup
+
+            mean_opt_time = 0
+            for i in range(n_adv):
+                y_target = get_adversarial_label(y_true, output_nn.squeeze(), adv_labels, policy)
+
+                start_opt = time.time()
+                milp_model.buildAdversarialProblem(y_target)
+                res = milp_model.optimize()
+                end_opt = time.time()
+                mean_opt_time += (end_opt - start_opt) / n_adv
+
+                if not res:
+                    continue
+
+                output_milp, adv, diff = res
+                y_pred_milp = np.argmax(output_milp)
+                if y_pred_milp != y_target:
+                    print(
+                        f"Error! y_pred_milp:{y_pred_milp}, y_target:{y_target} for image {image_id} in batch {batch_id}")
+
+                adv_images.append(torch.from_numpy(adv))
+                adv_labels.append(y_target)
+                diffs_example.append(diff)
+
+            logger.add_times(index, mean_opt_time, setup_time)
+
+            if log_images:
+                logger.log_adversarial(index, x, adv_images, adv_labels, y_true, diffs_example)
+            diffs.append(min(diffs_example))
+            index += 1
+
+        mean_diff = np.mean(diffs)
+        std_diff = np.std(diffs)
+        wandb.run.summary["mean_diff"] = mean_diff
+        wandb.run.summary["std_diff"] = std_diff
+        logger.log_times()
+
+        return None
 
 
-def train(run_id, classifier, layer_1_dim, layer_2_dim, lr, batch_size, force_train=False):
+def train(run_id, classifier, params, batch_size, force_train=False):
     # set up W&B logger
     if not run_id:
         run_id = wandb.util.generate_id()
 
     wandb_logger = WandbLogger(project='Adversarial Learning', entity="davoli", log_model="all", name=run_id,
                                id=run_id)  # log all
+
+    wandb_logger.experiment.config.update(params)
     checkpoint_callback = ModelCheckpoint(dirpath=f"checkpoint/{run_id}", filename="best", monitor='val_accuracy',
                                           mode='max', save_last=True)
     early_stopping = EarlyStopping(monitor='val_accuracy', patience=5, mode="max")
@@ -100,9 +126,8 @@ def train(run_id, classifier, layer_1_dim, layer_2_dim, lr, batch_size, force_tr
     model = Classifier(
         classifier=classifier,
         in_channels=1,
-        layer_1_dim=layer_1_dim,
-        layer_2_dim=layer_2_dim,
-        lr=lr
+        params=params,
+        num_classes=10
     )
 
     trainer = pl.Trainer(
@@ -123,16 +148,20 @@ def train(run_id, classifier, layer_1_dim, layer_2_dim, lr, batch_size, force_tr
 
     best_ckpt_path = f"checkpoint/{run_id}/best.ckpt"
     model.load_from_checkpoint(best_ckpt_path)
-    accuracy = milp_test(model, mnist.test_dataloader(), check_models_match=True)
+    milp_test(model, trainer, mnist.test_dataloader(), mnist.get_data_bounds(), trainer.global_step)
     # trainer.test(model, datamodule=mnist, ckpt_path="best")
     return model
 
 
 if __name__ == '__main__':
     args = get_args()
-    run_hash = get_runid_by_args(args)
+    with open('model_config.json') as json_file:
+        model_configs = json.load(json_file)
+
+    config.update(model_configs[args["classifier"]])
+
     classifier = CNN
-    if args["classifier"] == "DNN":
+    if config["type"] == "DNN":
         classifier = DNN
 
-    model = train(run_hash, classifier, args["layer_1_dim"], args["layer_2_dim"], args["learning_rate"], args["batch_size"])
+    model = train(args["classifier"], classifier, config, BATCH_SIZE)

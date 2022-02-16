@@ -3,6 +3,7 @@ import pytorch_lightning as pl
 from torchvision.datasets import MNIST
 from torch.utils.data import DataLoader, random_split
 from torchvision.transforms import transforms
+import numpy as np
 
 
 class MNISTDataModule(pl.LightningDataModule):
@@ -13,7 +14,14 @@ class MNISTDataModule(pl.LightningDataModule):
         self.batch_size = batch_size
         self.transform = transforms.Compose([
             transforms.ToTensor(),
-            transforms.Normalize((0.1307,), (0.3081,))])
+            # transforms.Normalize((0.1307,), (0.3081,))
+        ])
+        self.mnist_train, self.mnist_val, self.mnist_test = None, None, None
+
+    def get_data_bounds(self):
+        bounds = np.array([[0, 255]], dtype=np.uint8)
+        bounds = self.transform(bounds).squeeze()
+        return bounds[0].item(), bounds[1].item()
 
     def prepare_data(self):
         '''called only once and on 1 GPU'''

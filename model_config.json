@@ -1,0 +1,11 @@
+{
+  "DNN_8x8": {
+    "type": "DNN",
+    "linear_layers": [8, 8]
+  },
+  "CNN_1x4": {
+    "type": "CNN",
+    "conv_layers": [4],
+    "kernel_size": 14
+  }
+}

@@ -15,4 +15,16 @@ def element_at(self, index):
         index -= idxs[-1] * stride
     return self.__getitem__(tuple(idxs))
 
+
+def dict_to_list(d: dict) -> list:
+    l = list(d.values())
+    out = []
+    for el in l:
+        if type(el) == list:
+            out += el
+        else:
+            out += [el]
+    return out
+
+
 MVar.element_at = element_at
